@@ -5,6 +5,7 @@
     <version>1.0.0</version>
     <authors>Ove Andersen</authors>
     <owners>EyeCatch</owners>
+    <projectUrl>https://github.com/azzlack/ninject.web.webapi.missingbindinglogger</projectUrl>
     <iconUrl>http://www.eyecatch.no/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>

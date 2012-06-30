@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Web;
     using System.Web.Http;
 
     using Ninject.Activation;
@@ -22,6 +23,10 @@
         /// </summary>
         public MissingBindingLogger()
         {
+            // Wire up events
+            BindingMissing += this.OnBindingMissing;
+
+            // Wire up logger
             var factory = GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(ILoggerFactory)) as ILoggerFactory;
 
             if (factory != null) 
@@ -29,6 +34,11 @@
                 this.Log = factory.GetCurrentClassLogger();
             }
         }
+
+        /// <summary>
+        /// Occurs when [binding missing].
+        /// </summary>
+        public static event EventHandler<MissingBindingEventArgs> BindingMissing;
 
         /// <summary>
         /// Gets the logger.
@@ -51,10 +61,23 @@
 
             if (!this.TypeIsSelfBindable(service) && !this.TypeIsSystemAssembly(service) && this.Log != null)
             {
-                this.Log.Error("Missing binding for '{0}'", request.Service);
+                if (BindingMissing != null)
+                {
+                    BindingMissing(this, new MissingBindingEventArgs(service));
+                }
             }
 
             return Enumerable.Empty<IBinding>();
+        }
+
+        /// <summary>
+        /// Called when [binding missing].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="args">The <see cref="EventArgs" /> instance containing the event data.</param>
+        public virtual void OnBindingMissing(object sender, MissingBindingEventArgs args)
+        {
+            this.Log.Error("Missing concrete implementation for dependency '{0}'", args.Service);
         }
 
         /// <summary>
