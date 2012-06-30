@@ -3,6 +3,9 @@
     using Ninject.Modules;
     using Ninject.Planning.Bindings.Resolvers;
 
+    /// <summary>
+    /// Module for loading the missing binding logger
+    /// </summary>
     public class MissingBindingLoggerModule : NinjectModule
     {
         /// <summary>
