@@ -24,12 +24,12 @@
         public MissingBindingLogger()
         {
             // Wire up events
-            BindingMissing += this.OnBindingMissing;
-
+            BindingMissing += this.OnBindingMissing; 
+            
             // Wire up logger
             var factory = GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(ILoggerFactory)) as ILoggerFactory;
 
-            if (factory != null) 
+            if (factory != null)
             {
                 this.Log = factory.GetCurrentClassLogger();
             }

@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivationLogger.cs" />
     <Compile Include="MissingBindingEventArgs.cs" />
     <Compile Include="MissingBindingException.cs" />
     <Compile Include="MissingBindingLogger.cs" />
