@@ -1,6 +1,5 @@
-﻿namespace Ninject.Web.WebApi.MissingBindingLogger
+﻿namespace Ninject.Extensions.MissingBindingLogger
 {
-    using Ninject.Activation.Strategies;
     using Ninject.Modules;
     using Ninject.Planning.Bindings.Resolvers;
 
@@ -15,9 +14,7 @@
         public override void Load()
         {
             // Register missing binding logger component
-            Kernel.Components.Add<IMissingBindingResolver, MissingBindingLogger>();
-
-            Kernel.Components.Add<IActivationStrategy, ActivationLogger>();
+            this.Kernel.Components.Add<IMissingBindingResolver, MissingBindingLogger>();
         }
     }
 }

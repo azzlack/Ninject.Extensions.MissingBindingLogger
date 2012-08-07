@@ -2,10 +2,11 @@
 <package>
   <metadata>
     <id>Ninject.Web.WebApi.MissingBindingLogger</id>
+    <title>Ninject.Extensions.MissingBindingLogger</title>
     <version>1.0.0</version>
     <authors>Ove Andersen</authors>
     <owners>EyeCatch</owners>
-    <projectUrl>https://github.com/azzlack/ninject.web.webapi.missingbindinglogger</projectUrl>
+    <projectUrl>http://www.eyecatch.no/projects/ninject-binding-loggers/</projectUrl>
     <iconUrl>http://www.eyecatch.no/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -17,7 +18,6 @@
     <tags></tags>
     <dependencies>
       <group targetFramework="net45">
-        <dependency id="Microsoft.AspNet.WebApi" version="4.0.20505.0" />
         <dependency id="Ninject.Extensions.Logging" version="3.0.1.0" />
         <dependency id="WebActivator" version="1.5.1" />
       </group>

@@ -1,4 +1,4 @@
-﻿namespace Ninject.Web.WebApi.MissingBindingLogger
+﻿namespace Ninject.Extensions.MissingBindingLogger
 {
     using System;
 

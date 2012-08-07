@@ -1,10 +1,8 @@
-﻿namespace Ninject.Web.WebApi.MissingBindingLogger
+﻿namespace Ninject.Extensions.MissingBindingLogger
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
-    using System.Web.Http;
 
     using Ninject.Activation;
     using Ninject.Components;
@@ -27,12 +25,9 @@
             BindingMissing += this.OnBindingMissing; 
             
             // Wire up logger
-            var factory = GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(ILoggerFactory)) as ILoggerFactory;
+            var kernel = new StandardKernel();
 
-            if (factory != null)
-            {
-                this.Log = factory.GetCurrentClassLogger();
-            }
+            this.Log = kernel.Get<ILoggerFactory>().GetCurrentClassLogger();
         }
 
         /// <summary>

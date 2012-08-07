@@ -1,12 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.Web.WebApi.MissingBindingLogger", "Ninject.Web.WebApi.MissingBindingLogger\Ninject.Web.WebApi.MissingBindingLogger.csproj", "{CF1374F9-5168-4219-AB39-D1EC691C08DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.Extensions.MissingBindingLogger", "Ninject.Web.WebApi.MissingBindingLogger\Ninject.Extensions.MissingBindingLogger.csproj", "{CF1374F9-5168-4219-AB39-D1EC691C08DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetPackage", "NuGetPackage\NuGetPackage.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CF1374F9-5168-4219-AB39-D1EC691C08DC} = {CF1374F9-5168-4219-AB39-D1EC691C08DC}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0F97A33F-F2A4-4226-BC73-6C5E0130A7A5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\nuget.exe = .nuget\nuget.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.Extensions.MissingBindingLogger.Tests", "Ninject.Extensions.MissingBindingLogger.Tests\Ninject.Extensions.MissingBindingLogger.Tests.csproj", "{43BF2D49-AD44-408B-AF26-3385EE2040F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +25,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BF2D49-AD44-408B-AF26-3385EE2040F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BF2D49-AD44-408B-AF26-3385EE2040F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BF2D49-AD44-408B-AF26-3385EE2040F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BF2D49-AD44-408B-AF26-3385EE2040F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF1374F9-5168-4219-AB39-D1EC691C08DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF1374F9-5168-4219-AB39-D1EC691C08DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF1374F9-5168-4219-AB39-D1EC691C08DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
