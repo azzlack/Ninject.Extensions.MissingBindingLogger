@@ -1,4 +1,4 @@
-Ninject.Web.Webapi.MissingBindingLogger
+Ninject.Extensions.MissingBindingLogger 
 =======================================
 
-Logs missing bindings in your application
+Logs missing bindings in your application with Ninject
