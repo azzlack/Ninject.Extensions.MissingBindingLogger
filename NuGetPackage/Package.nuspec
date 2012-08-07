@@ -19,7 +19,6 @@
     <dependencies>
       <group targetFramework="net45">
         <dependency id="Ninject.Extensions.Logging" version="3.0.1.0" />
-        <dependency id="WebActivator" version="1.5.1" />
       </group>
     </dependencies>
   </metadata>
